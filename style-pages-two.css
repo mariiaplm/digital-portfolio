@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Profa";
+  src: url("profa/ProfaTrial-Black.ttf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Profa-light";
+  src: url("profa/ProfaTrial-Light.ttf") format("opentype");
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  background: #111111;
+  color: white;
+  font-family: "Profa", sans-serif;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.7rem;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 0 3rem;
+}
+
+.back,
+.back:visited {
+  color: white;
+}
+
+.back {
+  position: absolute;
+  top: 4.7rem;
+  left: 2rem;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.back:hover {
+  transform: translateX(-5px);
+  color: #ff8a5c;
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 65px;
+  margin-bottom: 0;
+
+  background: linear-gradient(90deg, #ff8a5c, #ffd27f, #ff5c5c, #ff8a5c);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: shift 6s linear infinite;
+}
+
+@keyframes shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1.5rem auto;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 60%;
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover img {
+  transform: scale(1.3);
+}
+
+.hero-text p {
+  margin: 1.25rem 0;
+}
+
+.name {
+  font-size: 28px;
+  color: rgb(159, 159, 159);
+  font-family: "Profa-light", sans-serif;
+  font-weight: 300;
+}
+
+/* arrow animation */
+#more-arrows {
+  width: 55px;
+  height: 45px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+#more-arrows polygon {
+  fill: rgb(192, 192, 192);
+  transition: all 0.2s ease-out;
+}
+
+#more-arrows polygon.arrow-middle {
+  opacity: 0.75;
+}
+
+#more-arrows polygon.arrow-top {
+  opacity: 0.5;
+}
+
+#more-arrows:hover polygon {
+  fill: #ff8a5c;
+}
+
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}

@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Profa";
+  src: url("profa/ProfaTrial-Black.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Profa-light";
+  src: url("profa/ProfaTrial-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  background: #101010;
+  color: white;
+  font-family: sans-serif;
+}
+
+.hero {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 3rem 3rem 3rem 6rem;
+}
+
+.hero-animation {
+  flex: 1;
+  height: 100vh;
+}
+
+.menu a {
+  color: rgb(255, 67, 67);
+  margin-right: 3rem;
+  font-size: 35px;
+  font-family: "Profa-light", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.menu a:last-child {
+  margin-right: 0;
+}
+
+.menu a:visited {
+  color: rgb(255, 67, 67);
+}
+
+.menu a:hover {
+  color: #ff8a5c;
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+.hero-text h1 {
+  background: linear-gradient(90deg, #ff8a5c, #ffd27f, #ff5c5c, #ff8a5c);
+  background-size: 300% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: shift 6s linear infinite;
+}
+
+@keyframes shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+body {
+  font-family: "Profa", sans-serif;
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 120px;
+  margin-bottom: 0;
+}
+
+.name {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size: 50px;
+  color: #3b3b3b;
+  font-family: "Profa-light", sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  transform: scaleX(1.2);
+  transform-origin: left center;
+}
+
+spline-viewer {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-animation {
+  overflow: hidden;
+}

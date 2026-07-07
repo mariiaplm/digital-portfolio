@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Profa";
+  src: url("profa/ProfaTrial-Black.ttf") format("opentype");
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  background: #111111;
+  color: white;
+  font-family: "Profa", sans-serif;
+}
+
+.hero {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 3rem 3rem 3rem 6rem;
+}
+
+.hero-animation {
+  flex: 1;
+  height: 100vh;
+}
+
+.back,
+.back:visited {
+  color: white;
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 65px;
+
+  background: linear-gradient(90deg, #ff8a5c, #ffd27f, #ff5c5c, #ff8a5c);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: shift 6s linear infinite;
+}
+
+@keyframes shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.contact-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 3.75rem;
+}
+
+.contact-links a {
+  color: rgb(128, 128, 128);
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #ff8a5c;
+}
+
+.hero-text p {
+  margin: 0.5rem 0;
+}
+
+.name,
+.label {
+  font-size: 28px;
+  color: rgb(159, 159, 159);
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+}
+
+.hero-text p a {
+  font-size: 28px;
+  color: rgb(159, 159, 159);
+  text-decoration: underline;
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+}
+
+.back {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.back:hover {
+  transform: translateX(-5px);
+  color: #ff8a5c;
+}
+
+/* arrow animation */
+#more-arrows {
+  width: 68px;
+  height: 56px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+#more-arrows polygon {
+  fill: rgb(192, 192, 192);
+  transition: all 0.2s ease-out;
+}
+
+#more-arrows polygon.arrow-middle {
+  opacity: 0.75;
+}
+
+#more-arrows polygon.arrow-top {
+  opacity: 0.5;
+}
+
+#more-arrows:hover polygon {
+  fill: #ff8a5c;
+}
+
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}
+
+spline-viewer {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-animation {
+  overflow: hidden;
+}
