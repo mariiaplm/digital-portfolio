@@ -106,6 +106,19 @@ body {
   font-weight: 300;
 }
 
+p.resume-link {
+  font-size: 28px;
+  color: rgb(200, 200, 200);
+  font-family: "Profa-light", sans-serif;
+  font-weight: 300;
+  margin-top: 5rem;
+}
+
+.resume-link a {
+  color: rgb(200, 200, 200);
+  text-decoration: underline;
+}
+
 /* arrow animation */
 #more-arrows {
   width: 55px;
