@@ -100,14 +100,14 @@ body {
 }
 
 .name {
-  font-size: 28px;
+  font-size: 20px;
   color: rgb(159, 159, 159);
   font-family: "Profa-light", sans-serif;
   font-weight: 300;
 }
 
 p.resume-link {
-  font-size: 28px;
+  font-size: 20px;
   color: rgb(200, 200, 200);
   font-family: "Profa-light", sans-serif;
   font-weight: 300;
